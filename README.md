@@ -5,12 +5,12 @@ Programmer: Yuval Lando
 
 About
 ---------------------
-A few years ago, I wrote programs for real sensors.
+A few years ago, I wrote programs for sensors.
 Sensors are very small (the size of a matchbox) 
 computers with a usb connection and radio device.
 I try to write in sentilla but it took too much memory for real world use. 
-I try to write on tiny-os but nesc and callback style can became ugly fast.
-Then I discovered a way to emulate the threads of sentilla on tiny-os.
+I try to write on TinyOs but nesc and callback style can became ugly fast.
+Then I discovered a way to emulate the threads of sentilla on TinyOs.
 It is done by using coroutine build on a duff device.
 I do not have those devices around me anymore.
 If you want me to maintain/expand the framework you can hire me as
@@ -29,10 +29,10 @@ There are six folders:
 so it gets the temperature from the function getHeat.
 * printf_tinyos - It print the moteid on the computer connected to the mote (mote is a sensor node).
 * gateWay_tinyos - get a number n and return a n+7 the result is printed on the console.
-* getting a Double GateWay_tinyos - like gateWay_tinyos but sending a floating number
+* getting_a_Double_GateWay_tinyos - like gateWay_tinyos but sending a floating number
 (a double in mote is at the size of a float in java).
 
-Remembering the tiny-os batch command is hard so I add shall script files.
+Remembering the tiny-os batch command is hard so I add shell script files.
 The shell script files are:
 * buildprog - compile the program.
 * buildsim -compile a tossim simulator.
@@ -80,11 +80,11 @@ event void Co0.run()
     
     while(true) 
     {
-      //In c switch can go into while scope
+      //In c switch can go into while scope.
       mode=1;
       case 1:
-      //If stopping exit the function other wise continue
-      if (stop_func()) return;
+      //If stopping exit the function otherwise continue.
+      if (call Co.stop_func()) return;
     }
   }
 }
@@ -163,7 +163,7 @@ We can use tossim simulator or use my own sensor simulator found in
 
 Miscellaneous technical issues:
 ---------------------------------
-You cannot send a message with odd number of bytes.
+We cannot send a message with odd number of bytes.
 If there is a bug try adding a `char dummy` to the message struct.
 The type size in nesc and java are different so
 double in nesc is float in java.
