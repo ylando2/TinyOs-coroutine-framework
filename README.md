@@ -140,6 +140,9 @@ event void ProtocolName.receive(messageType* m)
   call Co.dispatch(MESSAGE_ID);
 }
 ```
+Co.dispatch - is like notify for Co.receive_block and Co.receive_block_time;
+stop waiting for the message to receive.
+
 Finally we wire the protocol by:
 Adding:
 ```c
