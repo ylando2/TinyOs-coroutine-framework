@@ -1,0 +1,5 @@
+COMPONENT=AppConfC
+
+
+include $(MAKERULES)
+
