@@ -23,9 +23,9 @@ If you want to build your own program the best approach is to expand the program
 found in local_tinyos folder.
 
 There are six folders:   
-* local_tinyos - one sensor send it a message to the other sensors, other sensors receive the message.
+* local_tinyos - one sensor send a message to the other sensors, other sensors receive the message.
 * random_walk_tinyos - implementation of random walk.
-* tiny-avarage_t - It suppose to calculate the average temperature but I did not install the sensors yet
+* tiny-avarage_t - It suppose to calculate the average temperature but I did not install the temperature sensors yet
 so it gets the temperature from the function getHeat.
 * printf_tinyos - It print the moteid on the computer connected to the mote (mote is a sensor node).
 * gateWay_tinyos - get a number n and return a n+7 the result is printed on the console.
@@ -155,9 +155,9 @@ uses interface ProtocolI<AppCMsg> as P1;
 ```
 to appC.nc
 
-appC.nc has two useful inline functions:
-getId - return the mote id.
-getTime - return current time in milliseconds.
+appC.nc has two useful inline functions:    
+getId - return the mote id.    
+getTime - return current time in milliseconds.    
 
 Testing the program
 -----------------------
