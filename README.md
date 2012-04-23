@@ -17,7 +17,7 @@ If you want me to maintain/expand the framework you can hire me as
 a programmer (or consultant) my email is:
 ylando2@gmail.com
 
-Files this framework
+Files and folders
 ---------------------------
 If you want to build your own program the best approach is to expand the program 
 found in local_tinyos folder.
